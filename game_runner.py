@@ -1,8 +1,8 @@
 import time
 from board import GameEngine, Move
+from P22CS201 import P22CS201
 from P25CS0004 import P25CS0004
 from B23CM1046 import B23CM1046
-from P22CS201 import P22CS201
 from config import *
 
 PIECE_SYMBOLS = {
@@ -159,11 +159,11 @@ def run_game(white_player_type, black_player_type, total_time_seconds=60):
         winner = "<Black>" if engine.white_to_move else "<White>"
         print(f"\nCheckmate! {winner} wins.")
         if engine.white_to_move:
-            black_log.append("Win by Checkmate (+300)")
-            black_points += 300
+            black_log.append("Win by Checkmate (+600)")
+            black_points += 600
         else:
-            white_log.append("Win by Checkmate (+300)")
-            white_points += 300
+            white_log.append("Win by Checkmate (+600)")
+            white_points += 600
     elif final_game_state == "stalemate":
         print("\nStalemate! It's a draw.")
     elif not game_over:
@@ -184,7 +184,5 @@ def run_game(white_player_type, black_player_type, total_time_seconds=60):
 
 if __name__ == "__main__":
     run_game(
-        white_player_type=P22CS201, black_player_type=B23CM1046, total_time_seconds=60
+        white_player_type=B23CM1046, black_player_type=P25CS0004, total_time_seconds=60
     )
-
-## Replace by your AI agents for test purposes. Note you only have to submit one AI agent.
